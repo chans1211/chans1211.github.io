@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portafolio - Ingeniería de Software</title>
+  <meta name="description" content="Portafolio de Ingeniería de Software - Nombre Apellido" />
+
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:linear-gradient(180deg,#081226 0%, #0b1220 100%);color:#e6eef6;line-height:1.5}
+    .container{max-width:1100px;margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--accent);
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px}
+    .card{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .intro h1{margin:0 0 8px;font-size:28px}
+    .intro p{margin:0;color:var(--muted)}
+    .cta{margin-top:16px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#7c3aed);color:#021424}
+    .btn-ghost{border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .skill{background:var(--glass);padding:6px 10px;border-radius:999px;color:var(--muted);font-weight:600;font-size:13px}
+
+    .projects{margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .proj-title{display:flex;align-items:center;justify-content:space-between}
+    .proj-tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{background:rgba(255,255,255,0.04);padding:6px 8px;border-radius:8px;font-size:12px;color:var(--muted)}
+
+    .sidebar .card{position:sticky;top:24px}
+    .resume{display:flex;gap:10px;align-items:center}
+
+    footer{text-align:center;padding:28px 0;color:var(--muted);font-size:14px;margin-top:28px}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">
+  <img src="imagenes/foros.jpg" alt="Foto de perfil" />
+</div>
+
+        <div>
+          <div style="font-weight:700">Sebastian Cordoba</div>
+          <div style="font-size:13px;color:var(--muted)">Estudiante / Ingeniero de Software</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">Sobre mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="intro card">
+        <h1>Hola — soy Sebastian, ingeniero de software</h1>
+        <p>Construyo paginas web y móviles con buen diseño, código mantenible y pruebas. Busco oportunidades para aprender y contribuir a equipos que entreguen software con impacto.</p>
+
+        <div class="skills">
+          <div class="skill">JavaScript</div>
+          <div class="skill">Python</div>
+          <div class="skill">Node.js</div>
+          <div class="skill">SQL</div>
+        </div>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="#projects">Ver proyectos</a>
+          <a class="btn btn-ghost" href="#contact">Contactarme</a>
+        </div>
+
+        <div style="margin-top:18px;color:var(--muted);font-size:14px">
+          <strong>Disponibilidad:</strong> Tiempo parcial · Remoto
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="card">
+          <h3>Contacto</h3>
+          <p style="color:var(--muted);margin:6px 0">email: <a href="mailto:cordobasebastian745@gmail.com">cordobasebastian745@gmail.com</a></p>
+          <p style="color:var(--muted);margin:6px 0">LinkedIn: <a href="#">https://www.linkedin.com/in/sebastian-cordoba-664718385/</a></p>
+          <p style="color:var(--muted);margin:6px 0">GitHub: <a href="#">https://github.com/chans1211</a></p>
+          <div style="margin-top:10px">
+            <a class="btn btn-primary" href="#" download>Descargar CV</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h4>Resumen</h4>
+          <p style="color:var(--muted);font-size:14px">3 proyectos completos · pruebas unitarias · CI/CD simple · metodologías ágiles</p>
+          <div style="margin-top:10px" class="resume">
+            <a class="btn btn-ghost" href="#">Ver CV</a>
+            <a class="btn btn-ghost" href="#">Certificados</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects" style="margin-top:22px">
+      <h2 style="margin:0 0 12px">Proyectos</h2>
+      <div class="projects">
+        <article class="card">
+          <div class="proj-title">
+            <h3 style="margin:0">Sistema de Gestión X</h3>
+            <div class="tag">2025</div>
+          </div>
+          <p style="color:var(--muted)">Pagina web para gestionar inventario, panel de administración </p>
+          <div style="margin-top:12px" class="proj-tags">
+            <div class="tag">React</div><div class="tag">Node.js</div><div class="tag">PostgreSQL</div>
+          </div>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <a class="btn btn-primary" href="#">Ver demo</a>
+            <a class="btn btn-ghost" href="#">Código</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="proj-title">
+            <h3 style="margin:0">Paguina web </h3>
+            <div class="tag">2025</div>
+          </div>
+          <p style="color:var(--muted)">Paguina web híbrida para reservas con despliegue básico.</p>
+          <div style="margin-top:12px" class="proj-tags">
+            <div class="tag">Flutter</div><div class="tag">Firebase</div>
+          </div>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <a class="btn btn-primary" href="#">Ver demo</a>
+            <a class="btn btn-ghost" href="#">Código</a>
+          </div>
+    </section>
+
+    <section id="skills" style="margin-top:22px">
+      <h2>Habilidades y herramientas</h2>
+      <div class="card" style="margin-top:10px;display:flex;flex-direction:column;gap:8px">
+        <div><strong>Lenguajes:</strong> JavaScript, Python, Java</div>
+        <div><strong>Frontend:</strong> React, HTML5, CSS3</div>
+        <div><strong>Backend:</strong> Node.js, FastAPI, Express</div>
+        <div><strong>BD:</strong> PostgreSQL, MongoDB</div>
+        <div><strong>DevOps:</strong> Docker, GitHub Actions, CI/CD</div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:22px">
+      <h2>Contacto</h2>
+      <div class="card" style="margin-top:10px">
+        <form onsubmit="event.preventDefault(); alert('Gracias — mensaje enviado (demo)');">
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <input placeholder="Nombre" required style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+            <input placeholder="Email" type="email" required style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+          </div>
+          <textarea placeholder="Mensaje" required style="width:100%;margin-top:8px;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;height:120px"></textarea>
+          <div style="margin-top:10px">
+            <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      Hecho con ♥ — Sebastian Cordoba· <a href="#">GitHub</a>
+    </footer>
+  </div>
+  </script>
+</body>
+</html>
